@@ -1,4 +1,4 @@
-var gulp        = require('gulp'),
+var	gulp    			 = require('gulp'),
 				scss        = require('gulp-sass'),
 				browserSync = require('browser-sync'),
 				uglify      = require('gulp-uglifyjs'),
@@ -9,8 +9,8 @@ var gulp        = require('gulp'),
 				imagemin    = require('gulp-imagemin'),
 				pngquant    = require('imagemin-pngquant'),
 				autoprefixer= require('gulp-autoprefixer'),
-				nunjucks 			= require('gulp-nunjucks');
-				svgSprite = require('gulp-svg-sprite');
+				nunjucks 			= require('gulp-nunjucks'),
+				svgSprite   = require('gulp-svg-sprite');
 
 
 var config = {
@@ -18,22 +18,23 @@ var config = {
 		dimension: {         // Set maximum dimensions
 			maxWidth: 500,
 			maxHeight: 500
-						},
-			spacing: {         // Add padding
-				padding: 0
-						}
-					},
-			mode: {
-				symbol: {
-					dest : '.'
-						}
-					}
-				};
+		},
+		spacing: {         // Add padding
+			padding: 0
+		}
+	},
+	mode: {
+		symbol: {
+			dest : '.'
+		}
+	}
+};
 				
 gulp.task('svg-sprite', function (cb) {
-	return gulp.src('app/img/svg_icons/*.svg')
+	return gulp.src('app/img/svg/svg_icons/*.svg')
 		.pipe(svgSprite(config))
-		.pipe(gulp.dest('app/img/sprite'));
+		.pipe(rename({basename: 'sprite'}))
+		.pipe(gulp.dest('app/img'));
 				});					
 
 gulp.task('nunjucks', function () {
@@ -87,7 +88,7 @@ gulp.task('clean', function(){
 });
 
 gulp.task('img', function(){
-	return gulp.src('app/img/**/*')
+	return gulp.src('app/img/raster/**/*')
 	.pipe(imagemin({
 		interlaced: true,
 		progressive: true,
@@ -119,6 +120,9 @@ gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'js-libs'], functi
 		])
 	.pipe(gulp.dest('dist/js'));
 });
+
+var buildSvgSprite = gulp.src('app/img/svg/sprite.svg')
+.pipe(gulp.dest('dist/img/svg'));
 
 // Default Task
 gulp.task('default', ['watch']);
