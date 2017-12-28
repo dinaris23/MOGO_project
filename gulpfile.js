@@ -10,6 +10,31 @@ var gulp        = require('gulp'),
 				pngquant    = require('imagemin-pngquant'),
 				autoprefixer= require('gulp-autoprefixer'),
 				nunjucks 			= require('gulp-nunjucks');
+				svgSprite = require('gulp-svg-sprite');
+
+
+var config = {
+	shape: {
+		dimension: {         // Set maximum dimensions
+			maxWidth: 500,
+			maxHeight: 500
+						},
+			spacing: {         // Add padding
+				padding: 0
+						}
+					},
+			mode: {
+				symbol: {
+					dest : '.'
+						}
+					}
+				};
+				
+gulp.task('svg-sprite', function (cb) {
+	return gulp.src('app/img/svg_icons/*.svg')
+		.pipe(svgSprite(config))
+		.pipe(gulp.dest('app/img/sprite'));
+				});					
 
 gulp.task('nunjucks', function () {
 	return gulp.src('app/templates/index.html')
