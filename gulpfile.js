@@ -11,6 +11,8 @@ var gulp        = require('gulp'),
 				autoprefixer= require('gulp-autoprefixer'),
 				nunjucks 			= require('gulp-nunjucks');
 				svgSprite = require('gulp-svg-sprite');
+				cheerio = require('gulp-cheerio'),
+				replace = require('gulp-replace');
 
 
 var config = {
@@ -33,7 +35,16 @@ var config = {
 gulp.task('svg-sprite', function (cb) {
 	return gulp.src('app/img/svg_icons/*.svg')
 		.pipe(svgSprite(config))
-		.pipe(gulp.dest('app/img/sprite'));
+		.pipe(gulp.dest('app/img/sprite'))
+		.pipe(cheerio({
+			run: function ($) {
+				$('[fill]').removeAttr('fill');
+				$('[stroke]').removeAttr('stroke');
+				$('[style]').removeAttr('style');
+			},
+			parserOptions: {xmlMode: true}
+		}))
+		.pipe(replace('&gt;', '>'))
 				});					
 
 gulp.task('nunjucks', function () {
