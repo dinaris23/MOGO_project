@@ -1,0 +1,27 @@
+// Base import
+
+@import "normalize";
+
+// Arguments and fonts
+
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+// Styles import
+
+@import "layout/header";
+@import "layout/about";
+@import "layout/facts";
+@import "layout/instruments";
+@import "layout/feature";
+@import "layout/job";
+@import "layout/quote";
+@import "layout/team";
+@import "layout/logos";
+@import "layout/work";
+@import "layout/testimonial";
+@import "layout/response";
+@import "layout/blog";
+@import "layout/map";
+@import "layout/footer";
