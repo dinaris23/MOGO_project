@@ -1,0 +1,63 @@
+.work {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    &_item {
+        min-height: 40vh;
+        width: 100%;
+        height: auto;
+        &_overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(252,227,138,0.8);
+            background: linear-gradient(to bottom, rgba(252,227,138,0.8) 0%,rgba(243,129,129,0.8) 100%);
+            box-sizing: border-box;
+            min-height: 40vh;
+            height: 100%;
+            width: 100%;
+            transition: opacity 0.45s ease-in-out;
+            text-align: center;
+            font-weight: 900;
+            font-size: 30px;
+            color: #fff;
+            opacity: 0;
+                &:hover{
+                  opacity: 1;
+                }
+        }
+
+        &--first{
+            background: url(../img/raster/raster_images/1_work.jpg);
+            background-position: bottom;
+        }
+        &--second {
+            background: url(../img/raster/raster_images/2_work.jpg);
+            background-position: bottom left;
+        }
+        &--third {
+            background: url(../img/raster/raster_images/3_work.jpg);
+            background-position: center;
+        }
+        &--fourth {
+            background: url(../img/raster/raster_images/4_work.jpg);
+            background-position: center;
+        }
+        &--fifth {
+            background: url(../img/raster/raster_images/5_work.jpg);
+            background-position: center;
+        }
+        &--sixth {
+            background: url(../img/raster/raster_images/6_work.jpg);
+            background-position: center;
+        }
+        &--seventh {
+            background: url(../img/raster/raster_images/7_work.jpg);
+            background-position: center;
+        }
+  
+        &:nth-child(3) {
+            grid-column: 3;
+            grid-row-end: span 2;
+  }
+    }
+}
