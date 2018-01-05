@@ -129,10 +129,11 @@ gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'js-libs'], functi
 		'app/js/scripts.min.js' 
 		])
 	.pipe(gulp.dest('dist/js'));
+	
+	var buildSvgSprite = gulp.src('app/img/svg/sprite.svg')
+	.pipe(gulp.dest('dist/img/svg'));
 });
 
-var buildSvgSprite = gulp.src('app/img/svg/sprite.svg')
-.pipe(gulp.dest('dist/img/svg'));
 
 // Default Task
 gulp.task('default', ['watch']);
