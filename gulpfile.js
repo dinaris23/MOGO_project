@@ -34,18 +34,18 @@ var config = {
 				
 gulp.task('svg-sprite', function (cb) {
 	return gulp.src('app/img/svg/svg_icons/*.svg')
-		.pipe(svgSprite(config))
-		.pipe(gulp.dest('app/img/sprite'))
+		.pipe(svgSprite(config))	
 		.pipe(cheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
-			},
-			parserOptions: {xmlMode: true}
-		}))
+            run: function($, file) {
+                $('[fill]:not([fill="currentColor"])').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+            },
+            parserOptions: { xmlMode: true }
+        }))
 		.pipe(replace('&gt;', '>'))
-				});					
+		.pipe(rename({ basename: 'sprite' }))
+		.pipe(gulp.dest('app/img'))
+});					
 
 gulp.task('nunjucks', function () {
 	return gulp.src('app/templates/index.html')
