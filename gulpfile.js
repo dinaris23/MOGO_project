@@ -117,9 +117,6 @@ gulp.task('watch', ['browser-sync', 'nunjucks', 'scss', 'js'], function() {
 gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'js-libs'], function() {
 	var buildIndex = gulp.src('app/index.html')
 	.pipe(gulp.dest('dist'));
-
-	var buildFonts = gulp.src('app/fonts/**/*') 
-			.pipe(gulp.dest('dist/fonts'))
 	
 	var buildCss = gulp.src('app/css/main.min.css')
 	.pipe(gulp.dest('dist/css'));

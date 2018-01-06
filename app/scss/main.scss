@@ -2,12 +2,11 @@
 
 @import "normalize";
 
-// Arguments and fonts
+// Arguments
 
-@import "fonts";
 @import "variables";
 @import "mixins";
-@import "sprite";
+@import "common";
 
 // Styles import
 
@@ -26,23 +25,3 @@
 @import "layout/blog";
 @import "layout/map";
 @import "layout/footer";
-
-// Main styles
-body {
-    background-color: #fff;
-    font-size: 16px;
-    color: #999999;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    font-family: 'robotoregular';
-    font-weight: 300;
-    width: 100%;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.grid {
-    display: grid;
-}
