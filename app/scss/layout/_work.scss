@@ -31,9 +31,12 @@
             font-family: $theme-font;
             font-size: 14px;
             text-transform: uppercase;
+            padding-top: 20px;
                 &--it {
-                    font-family: $common-font-italic;
+                    font-family: $common-font;
+                    font-style: italic;
                     font-size: 15px;
+                    padding-top: 20px;
                 }
             }    
         
@@ -72,9 +75,4 @@
             grid-row-end: span 2;
   }
     }
-}
-
-h1 {
-    font-family: "Montserrat";
-    font-style: bold;
 }
