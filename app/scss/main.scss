@@ -2,12 +2,11 @@
 
 @import "normalize";
 
-// Arguments and fonts
+// Arguments
 
-@import "fonts";
 @import "variables";
 @import "mixins";
-@import "sprite";
+@import "common";
 
 // Styles import
 
@@ -46,3 +45,5 @@ body {
 .grid {
     display: grid;
 }
+=======
+>>>>>>> 8e4b4cae1cd1578787d9bcab5dfbc8e1401dc0d7

@@ -34,18 +34,18 @@ var config = {
 				
 gulp.task('svg-sprite', function (cb) {
 	return gulp.src('app/img/svg/svg_icons/*.svg')
-		.pipe(svgSprite(config))
-		.pipe(gulp.dest('app/img/sprite'))
+		.pipe(svgSprite(config))	
 		.pipe(cheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
-			},
-			parserOptions: {xmlMode: true}
-		}))
+            run: function($, file) {
+                $('[fill]:not([fill="currentColor"])').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+            },
+            parserOptions: { xmlMode: true }
+        }))
 		.pipe(replace('&gt;', '>'))
-				});					
+		.pipe(rename({ basename: 'sprite' }))
+		.pipe(gulp.dest('app/img'))
+});					
 
 gulp.task('nunjucks', function () {
 	return gulp.src('app/templates/index.html')
@@ -117,9 +117,6 @@ gulp.task('watch', ['browser-sync', 'nunjucks', 'scss', 'js'], function() {
 gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'js-libs'], function() {
 	var buildIndex = gulp.src('app/index.html')
 	.pipe(gulp.dest('dist'));
-
-	var buildFonts = gulp.src('app/fonts/**/*') 
-			.pipe(gulp.dest('dist/fonts'))
 	
 	var buildCss = gulp.src('app/css/main.min.css')
 	.pipe(gulp.dest('dist/css'));
@@ -129,10 +126,11 @@ gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'js-libs'], functi
 		'app/js/scripts.min.js' 
 		])
 	.pipe(gulp.dest('dist/js'));
+	
+	var buildSvgSprite = gulp.src('app/img/svg/sprite.svg')
+	.pipe(gulp.dest('dist/img/svg'));
 });
 
-var buildSvgSprite = gulp.src('app/img/svg/sprite.svg')
-.pipe(gulp.dest('dist/img/svg'));
 
 // Default Task
 gulp.task('default', ['watch']);
