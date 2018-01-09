@@ -9,8 +9,7 @@ $icon-color: #f38181;
 $special-font: 'Kaushan Script', cursive;
 $theme-font: Montserrat, sans-serif;
 $common-font: Roboto, sans-serif;
-
-// Placeholders
+$img-radius: 50%;
 
 %redline {
     &::after {
@@ -19,5 +18,15 @@ $common-font: Roboto, sans-serif;
         width: 60px;
         border-bottom: $icon-color solid 3px;
         margin: 35px auto;
+    }
+}
+
+%redline_left {
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        border-bottom: $icon-color solid 3px;
+        margin: 20px 0 25px 0;
     }
 }
