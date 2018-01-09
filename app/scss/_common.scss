@@ -5,19 +5,22 @@ body {
     width: 100%;
     padding: 0;
     margin: 0 auto;
-    font-family: 'robotoregular';
+    font-family: $common-font;
     font-weight: 300;
     width: 100%;
 }
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
+    padding: 0 10px;
 }
 .grid {
     display: grid;
 }
-.svg-blue-icon {
+.svg-icon-blue {
     width: 30px;
+    height: 30px;
     fill: #95e1d3;
     display: inline-block;
 }
@@ -26,4 +29,25 @@ body {
     height: 30px;
     fill: #ffffff;
     display: inline-block;
+}
+.underline {
+    display: inline-block;
+    height: 3px;
+    width: 60px;
+    margin: 25px auto;
+    background: #f38181;
+}
+.section-title {
+    font-family: $special-font;
+    font-size: 24px;
+    color: #000;
+}
+.section-subtitle {
+    font-family: $theme-font;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+}
+.left {
+    float: left;
 }
