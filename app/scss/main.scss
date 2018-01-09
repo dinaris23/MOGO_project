@@ -26,42 +26,5 @@
 @import "layout/map";
 @import "layout/footer";
 
-// Main styles
-body {
-    background-color: #fff;
-    font-size: 14px;
-    color: #999999;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    font-family: $common-font;
-    font-weight: 300;
-    width: 100%;
-    line-height: 1.6;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.grid {
-    display: grid;
-}
-.section-title {
-    font-family: $special-font;
-    font-size: 24px;
-    color: #000;
-    margin: 0;
-    z-index: 2;
-}
-.section-subtitle {
-    font-family: $theme-font;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: #000;
-    z-index: 2;
-    @extend %redline;
-}
-.circle_img {
-    border-radius: $img-radius;
-}
+
 
