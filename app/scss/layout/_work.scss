@@ -25,7 +25,8 @@
             font-size: 30px;
             color: #fff;
             opacity: 0;
-            font: $special-font 30px;
+            font-family: $special-font;
+            font-size: 30px;
                 &:hover{
                   opacity: 1;
                 }
