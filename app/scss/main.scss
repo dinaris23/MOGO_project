@@ -50,12 +50,18 @@ body {
     font-family: $special-font;
     font-size: 24px;
     color: #000;
+    margin: 0;
+    z-index: 2;
 }
 .section-subtitle {
     font-family: $theme-font;
     font-size: 30px;
     text-transform: uppercase;
     color: #000;
+    z-index: 2;
     @extend %redline;
+}
+.circle_img {
+    border-radius: $img-radius;
 }
 
