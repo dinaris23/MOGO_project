@@ -1,1 +1,151 @@
+.team {
+    min-height: 100vh;
+    width: 62.5%;     //1200px(block about) / 1920px(layout width);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 50px;
 
+    &__title {
+        font-family: $special-font;
+        font-size: 24px;
+        margin: 0;
+        text-align: center;
+        color: black;
+    }
+
+    &__subtitle {
+        font-family: $theme-font;
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0;
+        margin-top: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        color: black;
+
+        @extend %redline;
+    }
+
+    &__paragraph {
+        text-align: center;
+        line-height: 24px;
+        width: 80%; //950px(paragraph) / 1200px(block about);
+        margin: 0 auto;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 70px;
+    }
+
+    &__item {
+        width: 31%;
+        height: 450px;
+        text-decoration: none;
+
+        &--overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            background: rgba(252,227,138,0.8);
+            background: $gradient;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            transition: opacity 0.5s ease-in-out,
+                        box-shadow 0.5s ease;
+            text-align: center;
+            font-weight: 900;
+            font-size: 30px;
+            color: #fff;
+            opacity: 0;
+            font-family: $special-font;
+            font-size: 30px;
+
+                &:hover{
+                  opacity: 1;
+                  box-shadow: 7px 7px 0 0 rgba(149,225,211, 1) ;
+                }
+            }    
+
+        &--title {
+            font-family: $theme-font;
+            font-size: 14px;
+            text-transform: uppercase;
+        }    
+
+        &--first{
+            background: url(../img/raster/raster_images/team_1.jpg);
+            background-position: 20% center;
+        }
+        &--second {
+            background: url(../img/raster/raster_images/team_2.jpg);
+            background-position: center bottom;
+        }
+        &--third {
+            background: url(../img/raster/raster_images/team_3.jpg);
+            background-position: center 10%;
+        }
+
+        &--svg {
+            height: 30px;
+            width: 30px;
+            fill: $icon-color;
+            display: inline;
+            margin-top: 12.5px;
+            transition: fill 1s ease;
+        }
+    }   
+    
+    &__link {
+        display: inline-block;
+        text-align: center;
+        width: 55px;
+        height: 55px;
+        text-decoration: none;
+        background-color: $icon-background;
+        transition: background-color 1s ease;
+
+        &:hover {
+            background-color: $icon-color;
+
+            .team__item--svg {
+                fill: #ffffff;
+            }
+        }
+    }
+
+    &__captions {
+        display: flex;
+        justify-content: space-between;
+        
+        &--wrapper {
+            width: 31%;
+        }        
+
+        &--name, &--job {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        &--name {
+            color: black;
+            font-family: $theme-font;
+            text-transform: uppercase;
+            margin-top: 30px;
+        }
+
+        &--job {
+            font-family: $common-font;
+            font-weight: 300;
+            font-style: italic;
+            margin: 15px 0;
+        }
+    }
+}
