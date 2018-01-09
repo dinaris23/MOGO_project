@@ -9,3 +9,15 @@ $icon-color: #f38181;
 $special-font: Kaushan Script,sans-serif;
 $theme-font: Montserrat,sans-serif;
 $common-font: Roboto,sans-serif;
+
+// Placeholders
+
+%redline {
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        border-bottom: $icon-color solid 3px;
+        margin: 35px auto;
+    }
+}

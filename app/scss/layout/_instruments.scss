@@ -4,14 +4,34 @@
     &_wrapp {
         display: flex;
         justify-content: space-between;
-        border-bottom: 2px solid #e5e5e5;
         padding: 0 30px;
     }
-    &_item {
+    &_divider {
+        width: 100%;
+        height: 2px;
+        background: #e5e5e5;
         overflow: hidden;
+        margin: 20px 0px;
+        display: inline-block;
+    }
+    &_item {
+
         &_content {
-            
+            width: 80%;
+            float: right;
+            text-align: left;
+        }
+        &_title {
+            margin: 0;
+            font-family: $theme-font;
+            text-transform: uppercase;
+            font-size: 14px;
         }
 
+    }
+    &_icon {
+        width: 15%;
+        float: left;
+        margin-right: 5%;
     }
 }
