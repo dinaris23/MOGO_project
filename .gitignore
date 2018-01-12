@@ -8,3 +8,7 @@ app/css/main.min.css
 app/js/scripts.min.js
 app/js/libs.min.js
 app/img/svg/svg_icons/
+.DS_Store
+app/.DS_Store
+app/img/.DS_Store
+app/img/raster/.DS_Store
