@@ -1,12 +1,29 @@
-.logo{
+.logos {
+    width: 100%;
+    background-color: #f8f8f8;
+
+    &__img {
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+    }
+}
+
+.logo {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 15px 0 15px 0;
-    background-color: #f8f8f8;
+    padding: 0;
 }
 
 .logos__logo { 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.container--little {
+    padding: 50px 0;
 }

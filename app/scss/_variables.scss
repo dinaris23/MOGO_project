@@ -22,13 +22,3 @@ $img-radius: 50%;
         margin: 35px auto;
     }
 }
-
-%redline_left {
-    &::after {
-        content: '';
-        display: block;
-        width: 60px;
-        border-bottom: $icon-color solid 3px;
-        margin: 20px 0 25px 0;
-    }
-}

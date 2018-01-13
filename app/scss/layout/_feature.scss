@@ -1,35 +1,44 @@
 .feature {
-    background-image: url(../img/raster/raster_images/background.png);
-    padding-top: 70px;
-    padding-bottom: 0px;
+    background: url(../img/raster/raster_images/background.jpg);
+    width: 100%;
     position: relative;
+
+    &__click {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 50%;
+        bottom: 58px;
+        transform: translateX(-65%);
+        transition: background-color 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba($color: $special-color, $alpha: 0.5);
+        }
+    }
+
+    &__display {
+        width: 180px;
+        height: 313px;
+        position: absolute;
+        left: 50%;
+        bottom: 105px;
+        transform: translateX(-52%);
+        background: black;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
 }
 
-.feature__special {
-    font-family: $special-font;
-    color: $black-text-color;
-    text-align: center;
-    font-size: 24px;
+.noopacity {
+    opacity: 0;
 }
 
-.feature__theme {
-    font-family: $theme-font;
-    color: $black-text-color;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.feature__line {
-    @extend %redline;
-}
-
-.feature_ipad {
+.feature__ipad {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
 }
 
 .feature__iphone {
