@@ -1,0 +1,89 @@
+.blog {
+    .items {
+        &__item--blog {
+            position: relative;
+            
+            &:nth-child(1) {
+                background: url(../img/raster/raster_images/blog_1.jpg);     
+                background-position: center;       
+                background-size: cover;
+            }
+
+            &:nth-child(2) {
+                background: url(../img/raster/raster_images/blog_2.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &:nth-child(3) {
+                background: url(../img/raster/raster_images/blog_3.jpg);
+                background-position: center;
+                background-size: cover;
+            } 
+        }
+
+        &__date {
+            width: 60px;
+            background: $special-color;
+            position: absolute;
+            bottom: 10px;
+            padding: 10px 2px;
+            transform: translateX(-15%);
+            color: $common-text-color;
+            transition: transform 0.3s ease-in-out;
+            opacity: 1;
+        }
+
+        &__day {
+            font-family: $theme-font;
+            font-weight: 700;
+            font-size: 30px;            
+        }
+
+        &__month {
+            font-style: italic;
+            font-size: 20px;
+        }
+    }
+
+    .captions {
+        &__name--left {
+            text-align: left;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+
+        &__job--left {
+            text-align: left;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 15px;
+            padding-bottom: 15px;
+            border-bottom: $popup-border 1px solid;
+        }
+
+        &__wrapper--left {
+            text-align: left;
+        }
+
+        &__number {
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+
+    .gradient--blue {
+        opacity: 1;
+        background: transparent;
+
+        &:hover {
+            .items__date {
+                transform: translate(-15%, 13%);
+            }
+        }
+    }
+
+    .svg-icon-blue--little {
+        height: 15px;
+    }
+}

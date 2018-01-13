@@ -1,0 +1,72 @@
+.map {
+    background: url(../img/raster/raster_images/map.jpg);
+    cursor: pointer;
+    
+
+    .light--center {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        opacity: 1;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: rgba(255,255,255, 0.5);
+        }
+    }
+
+    .section-subtitle--red {
+        color: $icon-color;
+        font-size: 24px;
+    }
+
+    &__iframe {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+    }
+
+    &__closeframe {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 400px;
+        height: 300px;
+        background-color: rgba(0,0,0,0.1);
+        z-index: 2;
+        transform: translate(-50%, -70%);
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        &:after {
+            content: '\2718';
+            position: absolute;
+            font-size: 80px;
+            color: rgba($color: $special-color, $alpha: 1);
+            opacity: 0.8;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: color 0.5s ease-in-out,
+                         transform 0.5s ease-in-out;
+            background: linear-gradient(to top, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        &:hover {
+            &::after {
+                color:  transparent;
+                transform: translate(-40%, -10%);
+            }
+        }
+    }
+}
