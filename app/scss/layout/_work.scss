@@ -1,5 +1,6 @@
 .works {
     text-align: center;
+    padding: 50px 0 80px 0;
 }
 .work {
     display: grid;
@@ -13,18 +14,12 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background: rgba(252,227,138,0.8);
-            background: $gradient;
             box-sizing: border-box;
             min-height: 40vh;
-            height: 100%;
-            width: 100%;
-            transition: opacity 0.45s ease-in-out;
             text-align: center;
             font-weight: 900;
             font-size: 30px;
             color: #fff;
-            opacity: 0;
             font-family: $special-font;
             font-size: 30px;
                 &:hover{

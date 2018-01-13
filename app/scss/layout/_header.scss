@@ -1,20 +1,18 @@
 .header {
-    background: url(../img/raster/raster_images/header_background.jpg);
+    background: url(../img/raster/raster_images/header_background_0.jpg);
     background-position: center;
     background-size: cover;
+
+    .container--100vh {
+        min-height: 100vh;
+        padding: 25px 0;
+        padding-bottom: 0px;
+    }
     
     &__gradient {
         height: 100%;
         width: 100%;
         background: $gradient;
-    }
-
-    &__wrapper {
-        min-height: 100vh;
-        width: 62.5%;     //1200px(block about) / 1920px(layout width);
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
     }
 
     &__up {
@@ -24,12 +22,23 @@
         font-family: $theme-font;
         font-size: 14px;
         color: white;
-        padding-top: 25px;
+    }
 
-        &--logo {
-            font-weight: 700;
-            font-size: 30px;
-            color: inherit;
+    &__logo {
+        font-weight: 700;
+        font-size: 30px;
+        color: inherit;
+        transform: scale(1);
+        background: linear-gradient(to top, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: color 0.5s ease-in-out,
+                    transform 0.5s ease-out;
+      
+
+        &:hover {
+            color: transparent;
+            transform: scale(1.2);
         }
     }
 
@@ -38,6 +47,37 @@
         width: 55%;
     }
 
+    &__item {
+        display: inline;
+        cursor: pointer;
+        color: inherit;
+        transition: border-bottom 0.3s ease-in-out;
+        position: relative;
+
+        a {
+            color: inherit;
+        }
+
+        &::after {
+            content: '';
+            transition: width 0.5s ease-in-out;
+            width: 0;
+            display: block;
+            position: absolute;
+            top: 20px;
+            margin: 0;
+        }
+
+        &:hover {
+            color: $mouse-on-text-color;
+
+            &:after {
+                width: 100%;
+                border-bottom: solid 3px $mouse-on-text-color;
+            }
+        }
+    }
+    
     &__list {
         display: flex;
         align-content: center;
@@ -48,40 +88,24 @@
         padding: 0;
         padding-top: 10px;
         margin: 0;     
+    }
 
-        &--item {
-            display: inline;
-            cursor: pointer;
-            color: inherit;
-            transition: border-bottom 0.3s ease-in-out;
+    &__svg {
+        height: 14px;
+    }
 
-            a {
-                color: inherit;
-            }
-
-            &:hover {
-                color: $mouse-on-text-color;
-                border-bottom: $mouse-on-text-color solid 3px; 
+    &__purchase  {
+        &:hover {
+            .svg-purchase {
+            fill: $mouse-on-text-color;
             }
         }
+    }
 
-        &--svg {
-            height: 14px;
-        }
-
-        &--purchase  {
-            &:hover {
-                .svg-purchase {
-                fill: $mouse-on-text-color;
-                }
-            }
-        }
-
-        &--search {
-            &:hover {
-                .svg-search {
-                fill: $mouse-on-text-color;
-                }
+    &__search {
+        &:hover {
+            .svg-search {
+            fill: $mouse-on-text-color;
             }
         }
     }
@@ -141,41 +165,43 @@
         justify-content: space-between;
         margin-top: 80px;
 
-        &--item {
-            width: 23%;
-            text-align: left;
-            text-transform: uppercase;
-            font-family: $theme-font;
-            font-size: 14px;
-            color: white;
-            position: relative;     
-            cursor: pointer;       
+        .slider {
+            &__item {
+                width: 23%;
+                text-align: left;
+                text-transform: uppercase;
+                font-family: $theme-font;
+                font-size: 14px;
+                color: white;
+                position: relative;     
+                cursor: pointer;       
 
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: -60px;
-                left: 0;
-                width: 100%;
-                height: 3px;
-                background: white;
-                opacity: 0.5;
-                margin: 35px auto;
-                transition: opacity 0.5s ease-in-out;
-            }             
-
-            &:hover {
                 &::before {
-                    opacity: 1;
-                    background: linear-gradient(to right, $icon-color 25%, white 25%);
-                }                   
-            }
-        }
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: -60px;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: white;
+                    opacity: 0.5;
+                    margin: 35px auto;
+                    transition: opacity 0.5s ease-in-out;
+                }             
 
-        &--number {
-            font-size: 18px;
-            font-weight: 700;
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                        background: linear-gradient(to right, $icon-color 25%, white 25%);
+                    }                   
+                }
+            }
+
+            &__number {
+                font-size: 18px;
+                font-weight: 700;
+            }
         }
     }
 }

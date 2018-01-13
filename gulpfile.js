@@ -111,7 +111,7 @@ gulp.task('img', function(){
 gulp.task('watch', ['browser-sync', 'nunjucks', 'scss', 'js'], function() {
 	gulp.watch('app/scss/**/*.scss', ['scss']);
 	gulp.watch('app/templates/*.html', ['nunjucks']);
-	gulp.watch('app/css/js/layout/*.js', ['js']);
+	gulp.watch('app/js/layout/*.js', ['js']);
 });
 
 gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'js-libs'], function() {
