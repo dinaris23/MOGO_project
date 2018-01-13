@@ -1,16 +1,22 @@
 .feature {
-    background-image: url(app/img/raster/raster_images/background.png);
+    background-image: url(../img/raster/raster_images/background.png);
+    padding-top: 70px;
+    padding-bottom: 0px;
+    position: relative;
 }
 
 .feature__special {
     font-family: $special-font;
     color: $black-text-color;
     text-align: center;
+    font-size: 24px;
 }
 
 .feature__theme {
     font-family: $theme-font;
     color: $black-text-color;
+    font-weight: bold;
+    font-size: 30px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -26,15 +32,9 @@
 
 }
 
-.ipad__screen {
-    position: absolute;
-    z-index: 2;
-    left: 33%;
-}
-
 .feature__iphone {
     position: absolute;
     z-index: 2;
     left: 60%;
-    bottom: 5%
+    bottom: -10%;
 }
