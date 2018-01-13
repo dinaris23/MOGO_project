@@ -3,6 +3,10 @@
     width: 100%;
     position: relative;
 
+    .section-title--padding {
+        padding-top: 50px;
+    }
+
     &__click {
         width: 35px;
         height: 35px;
