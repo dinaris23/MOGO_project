@@ -1,1 +1,40 @@
+.feature {
+    background-image: url(../img/raster/raster_images/background.png);
+    padding-top: 70px;
+    padding-bottom: 0px;
+    position: relative;
+}
 
+.feature__special {
+    font-family: $special-font;
+    color: $black-text-color;
+    text-align: center;
+    font-size: 24px;
+}
+
+.feature__theme {
+    font-family: $theme-font;
+    color: $black-text-color;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.feature__line {
+    @extend %redline;
+}
+
+.feature_ipad {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.feature__iphone {
+    position: absolute;
+    z-index: 2;
+    left: 60%;
+    bottom: -10%;
+}
