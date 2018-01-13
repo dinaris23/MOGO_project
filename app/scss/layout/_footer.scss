@@ -1,0 +1,133 @@
+.footer {
+    background-color: #f8f8f8;
+    &_container {
+        display: flex;
+        border-bottom: 2px solid #e5e5e5;
+        padding-top: 75px;
+        padding-bottom: 70px;
+    }
+    &_logo {
+        font-family: $theme-font;
+        font-size: 46px;
+        color: #cccccc;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    &_social {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        &_link {
+            padding-right: 15px;
+            display: inline-block;
+            text-decoration: none;
+            &:first-child {
+                padding-left: 25px;
+            }
+        }
+    }
+    &_icon {
+        width: 15px;
+        height: 15px;
+    }
+    &_item {
+        text-align: left;
+        padding-right: 70px;
+        
+        &:first-child {
+            padding-right: 30px;
+            flex-basis: 480px;
+        }
+        &:last-child {
+            padding-right: 0;
+            
+        }
+    }
+    &_title {
+        text-transform: uppercase;
+        font-family: $theme-font;
+        font-size: 14px;
+        color: #333333;
+        margin-bottom: 40px;
+    }
+    &_followers {
+        border-bottom: 2px solid #e5e5e5;
+        padding-bottom: 20px;
+    }
+    &_blog {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        align-items: center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
+        &_description {
+            margin-left: 20px;
+        }
+        &_title {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: $theme-font;
+            font-size: 12px;
+            color: #333333;
+            font-weight: bold;
+        }
+    }
+    &_sub {
+        position: relative;
+        display:inline-block;
+        width: 85%;
+        &_inp {
+            outline: none;
+            border: 1px solid #e7e7e7;
+            padding: 15px 0 15px 15px;
+            display: block;
+            width: 85%;
+            background: #fff;
+            font-size: 15px;
+        }
+        &_btn {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 1;
+            outline: none;
+            border: none;
+            display: inline-block;
+            background: $special-color;
+            color: #fff;
+            padding: 16px 35px;
+            cursor: pointer;
+            font-family: $theme-font;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+    &_date {
+        display: block;
+    }
+    &_instagram {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+        margin-bottom: 20px;
+    }
+    &_copyright {
+        padding: 25px 0;
+        text-align: center; 
+        font-family: $theme-font;
+        font-size: 14px;
+        color: #333333;
+        font-weight: bold;
+    }
+    &_link {
+        text-decoration: none;
+        color: #333333;
+        &--red {
+            color: $icon-color;
+        }
+        
+    }
+}
