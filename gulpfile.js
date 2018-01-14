@@ -118,7 +118,10 @@ gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'js-libs'], functi
 	var buildIndex = gulp.src('app/index.html')
 	.pipe(gulp.dest('dist'));
 	
-	var buildCss = gulp.src('app/css/main.min.css')
+	var buildCss = gulp.src([
+		'app/css/main.min.css',
+		'app/css/animate.css'
+		])
 	.pipe(gulp.dest('dist/css'));
 	
 	var buildJS = gulp.src([ 
