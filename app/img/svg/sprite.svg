@@ -46,5 +46,5 @@
 
 <symbol id="yuotube" viewBox="0 0 16 11" xmlns="http://www.w3.org/2000/svg"><g id="xLayer_2"><g id="xfooter"><g id="x_1"><g id="xicons"><path class="xst0" d="M13.5 0H2.9C1.5 0 0 .9 0 2.2v6.6C0 10.2 1.5 11 2.9 11h10.7c1.2.1 2.3-.7 2.4-2V2.2C16 1 14.9 0 13.6 0h-.1zM7 8V3l3.5 2.5L7 8z" id="xyoutube"/></g></g></g></g></symbol>
 
-<symbol viewBox="0 0 21 12" id="arrow" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="bLayer_2" data-name="Layer 2"><g id="bservice_2" data-name="service 2"><g id="bphotography"><path class="bcls-1" d="M20.58 9.46l-9-9A1.5 1.5 0 0 0 10.5 0a1.5 1.5 0 0 0-1.09.46l-9 9a1.5 1.5 0 1 0 2.22 2l7.87-7.84 8 8a1.5 1.5 0 0 0 2.12-2.12z" id="bARROW_DOWN" data-name="ARROW / DOWN"/></g></g></g></symbol></svg>
+<symbol id="arrow" viewBox="0 0 21 12" xmlns="http://www.w3.org/2000/svg"><g id="bLayer_2"><g id="bservice_2"><g id="bphotography"><path class="bst0" d="M.4 2.6l9 9c.3.3.7.5 1.1.5.4 0 .8-.2 1.1-.5l9-9c.6-.6.6-1.5.1-2.1-.6-.6-1.5-.6-2.1-.1l-.2.2-7.8 7.8-8-8C1.9-.1 1-.1.4.5c-.5.6-.5 1.5 0 2.1z" id="bARROW_DOWN"/></g></g></g></symbol></svg>
 

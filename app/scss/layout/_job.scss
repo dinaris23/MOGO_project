@@ -3,7 +3,6 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        color: black;
         margin-top: 80px;
     }
 
@@ -31,7 +30,6 @@
         display: inline;
         margin: 0;
         text-transform: uppercase;
-        
     }
 
     &__popup, &__wrap {
@@ -39,11 +37,19 @@
         border: $popup-border solid 1px;
     }
 
+    &__wrap {
+        font-style: italic;
+    }
+
     &__popup {
         position: relative;
         text-align: left;        
         padding-top: 20px;
         padding-left: 55px;
+        color: black;
+        cursor: pointer;
+        font-family: $theme-font;
+        font-size: 14px;
 
         &:not(:first-child) {
             margin-top: 10px;
@@ -51,7 +57,7 @@
         
         &:hover {
             background: lighten($popup-border, 8%); 
-        }     
+        } 
     }
     
 
@@ -91,11 +97,11 @@
 
     .svg-icon-grey {
         float: right;
-        transform: rotate(180deg);
+        transition: transform 1s ease-in-out;
     }
 }
 
- .open.svg-icon-grey {
-        float: right;
-        transform: rotate(0deg);
+    .svg {
+        transform: rotate(180deg);
     }
+
