@@ -1,5 +1,15 @@
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { 
-    
+@media (max-width: 1200px) { 
+    .footer {
+        &_container {
+        justify-content: space-between;
+        }
+        &_item {
+            padding: 0;
+            &:last-child {
+                display: none;
+            }
+        }
+}
 }

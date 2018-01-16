@@ -1,4 +1,34 @@
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
+@media (max-width: 992px) { 
+    .work {
+        grid-template-columns: repeat(3,1fr);
+        &_item {
+            &--third {
+                display: none;
+        }
+    }
     
- }
+}
+.response_wrapp {
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.response_clients {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px; 
+    &:first-child {
+        margin-right: 0;
+    }
+    &_content {
+        text-align: center;
+        margin-left: 0;
+    }
+    &_prof {
+        &:after {
+            margin: 20px auto;
+        }
+    }
+}
+
+}
