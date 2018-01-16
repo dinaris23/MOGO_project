@@ -1,6 +1,8 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (max-width: 1200px) { 
+    // footer //
+
     .footer {
         &_container {
         justify-content: space-between;

@@ -1,14 +1,21 @@
+<div class="header__images">
+    <img src="img/raster/raster_images/header_background_0.jpg" alt="" class="header__background test">
+    <img src="img/raster/raster_images/header_background_1.jpg" alt="" class="header__background test1">
+    <img src="img/raster/raster_images/header_background_2.jpg" alt="" class="header__background">
+    <img src="img/raster/raster_images/header_background_3.jpg" alt="" class="header__background">
+</div>
 <div class="header__gradient">
     <div class="container container--100vh">
-        <div class="header__up">
+        <div class="header__up animated--longer bounceInDown">
             <a href="#" class="header__logo">MoGo</a>
-            <nav class="header__nav">
+            <button class="header__phone"></button>
+            <nav class="header__nav" id="menu">
                 <ul class="header__list">
-                    <li class="header__item"><a href="#">about</a></li>
-                    <li class="header__item"><a href="#">service</a></li>
-                    <li class="header__item"><a href="#">work</a></li>
-                    <li class="header__item"><a href="#">blog</a></li>
-                    <li class="header__item"><a href="#">contact</a></li>    
+                    <li class="header__item"><a href="#about">about</a></li>
+                    <li class="header__item"><a href="#service">service</a></li>
+                    <li class="header__item"><a href="#work">work</a></li>
+                    <li class="header__item"><a href="#blog">blog</a></li>
+                    <li class="header__item"><a href="#contact">contact</a></li>    
                     <li class="header__item">
                         <a href="#" class="header__purchase">
                             <svg class="svg-icon-white header__svg svg-purchase">
@@ -26,15 +33,33 @@
                 </ul>                
             </nav>
         </div>
-
-        <h2 class="header__title">Creative Template</h2>
-        <h1 class="header__subtitle">Welcome to MoGo</h1>
-        <button class="header__btn" type="submit">learn more</button>
-        <div class="header__slider">
-            <a class="slider__item"><span class="slider__number">01</span> intro</a>
-            <a class="slider__item"><span class="slider__number">02</span> work</a>
-            <a class="slider__item"><span class="slider__number">03</span> about</a>
-            <a class="slider__item"><span class="slider__number">04</span> contacts</a>
+        <div class="header__content">
+            <div class="content__item">
+                <h2 class="header__title">Creative Template</h2>
+                <h1 class="header__subtitle">Welcome to MoGo</h1>
+                <a class="header__btn" href="#facts">learn more</a>
+            </div>      
+            <div class="content__item">
+                <h2 class="header__title">Some of our work</h2>
+                <h1 class="header__subtitle">Welcome to MoGo</h1>
+                <a class="header__btn" href="#work">let's view</a>
+            </div>    
+            <div class="content__item">
+                <h2 class="header__title">Story about us</h2>
+                <h1 class="header__subtitle">Welcome to MoGo</h1>
+                <a class="header__btn" href="#about">let's go read</a>
+            </div>    
+            <div class="content__item">
+                <h2 class="header__title">Our contacts</h2>
+                <h1 class="header__subtitle">Welcome to MoGo</h1>
+                <a class="header__btn" href="#footer">connect with us</a>
+            </div>    
+        </div>
+        <div class="header__slider animated--longer bounceInUp">
+            <a class="slider__item" data-slide="0"><span class="slider__number">01</span> intro<span class="red__line"></span></a>
+            <a class="slider__item" data-slide="1"><span class="slider__number">02</span> work<span class="red__line"></span></a>
+            <a class="slider__item" data-slide="2"><span class="slider__number">03</span> about<span class="red__line"></span></a>
+            <a class="slider__item" data-slide="3"><span class="slider__number">04</span> contacts<span class="red__line"></span></a>
         </div>
     </div>
 </div>
