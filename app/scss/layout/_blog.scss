@@ -68,8 +68,8 @@
             border-bottom: $popup-border 1px solid;
         }
 
-        &__wrapper--inblock {
-            display: none;
+        &__wrapper--blog {
+            visibility: hidden;
             position: absolute;
             left: 0;
             bottom: 0;

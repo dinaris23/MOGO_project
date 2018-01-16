@@ -10,6 +10,8 @@
       justify-content: space-between;
       padding: 15px 0 30px 0 ;
       flex: 0 0 20%;
+      flex-wrap: wrap;
+      flex-grow: 1;
     }
   }
   
@@ -20,7 +22,7 @@
   .fact__counter {
     font-weight: 700;
     text-align: center;
-    width: 240px;
+    width: 100%;
     font-size: 72px;
     color: $common-text-color;
   }
