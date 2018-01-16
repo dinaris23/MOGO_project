@@ -1,4 +1,22 @@
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) { 
+    //header
+
+    .header {
+        .slider {        
+            &__number {
+            display: block;
+            text-align: center;
+            }
+
+            &__item {
+                text-align: center;
+            }
+        }
+
+        .content__item {
+            height: 550px;
+        }
+    }
     
 }

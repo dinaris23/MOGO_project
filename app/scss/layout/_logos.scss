@@ -1,29 +1,40 @@
 .logos {
     width: 100%;
     background-color: #f8f8f8;
+    
 
     &__img {
     height: 100px;
-    transition: transform 0.3s ease-in-out;
-
-    &:hover {
-        transform: scale(1.2);
-    }
     }
 }
 
 .logo {
     width: 100%;
-    display: flex;
+    display: block;
     justify-content: space-between;
     padding: 0;
+    position: relative;
+    overflow: hidden;   
 }
 
 .logos__logo { 
-    display: flex;
+    display: inline-flex;
     justify-content: center;
+
+    &:hover {
+
+        img {
+            animation: 1s shake;
+        }
+    }
 }
 
 .container--little {
     padding: 50px 0;
+}
+
+@keyframes shake {
+    0%, 100% {}
+    25% {transform: rotate(-30deg);}
+    75% {transform: rotate(30deg);}
 }
