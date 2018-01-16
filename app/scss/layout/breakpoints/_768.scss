@@ -22,6 +22,87 @@
         }
     }
 
+    // blog //
+
+    .items--blog {
+        width: 100%;
+        margin-bottom: 140px;
+
+        .items__item--blog {
+            width: 100%;   
+        
+            &:not(:first-child) {                     
+               margin-top: 180px;
+            }
+        }
+    }
+
+
+    // about and team//
+
+    .items {
+        flex-direction: column;
+
+        &__item {
+            width: 60%;
+            margin: 15px auto;
+        }
+    }
+
+    .team {
+        .items {
+            &__item {
+                width: calc(100% - 15px);
+                margin-right: 15px;
+            }
+
+            .gradient--row {
+                opacity: 1;
+                background: transparent;
+                transition: opacity 0.3s ease-in-out;
+                align-items: flex-end;
+
+                &:hover {
+                    background: $gradient;
+                }
+            }
+        }
+    }
+
+    .captions {
+        display: none;
+
+        &__inblock {
+            display: block;
+        }
+    }
+
+    // job //
+
+    .job {
+        
+        &__img {
+            width: 100%;
+            height: 200px;
+
+            img {
+                position: relative;
+                left: 0;
+                transform: none;
+                margin: 0 auto;
+            }
+        }
+        
+        &__content {
+            flex-direction: column;
+        }
+
+        .popups {
+            margin-top: 15px;
+            width: 100%;
+        }
+    }
+
     // footer //
 
     .footer {

@@ -8,6 +8,7 @@
         .gradient {
             &--row {
                 flex-direction: row;
+                position: relative;
             }
         }                
     }  
@@ -53,6 +54,29 @@
     &__wrapper {
         width: 31%;
     }        
+
+    &__inblock {
+        display: none;
+        width: 100%;
+        bottom: 55px;
+        color: $icon-color;
+        position: absolute;
+        z-index: 0;
+        
+
+        h4, h5 {
+            color: inherit;
+            font-size: 20px;
+            background-color: $icon-background;
+            transition: background-color 0.3s ease-in-out,
+                        color 0.3s ease-in-out;
+            
+            &:hover {
+                background-color: $icon-color;
+                color: white;
+            }
+        }
+    }
 
     &__name, &__job {
         width: 100%;
