@@ -1,4 +1,31 @@
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
-    
+@media (max-width: 768px) { 
+    .instruments_wrapp {
+        flex-direction: column;
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .work {
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 5px;
+        &_item {
+            min-height: 50vh;
+            &--third {
+                display: none;
+        }
+    }
  }
+    .footer {
+        &_item {
+            &:nth-child(2) {
+                display: none;
+            }
+            &:first-child {
+                flex: 1;
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+}
+}
