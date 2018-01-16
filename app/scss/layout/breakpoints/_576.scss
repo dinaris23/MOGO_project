@@ -18,6 +18,28 @@
             height: 550px;
         }
     }
+
+    // about //
+
+    .about {
+        .items__item {
+            width: 90%;
+            margin-right: 7px;
+        }
+    }
+
+    // team //
+
+    .team {
+        .gradient--row {
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .captions__inblock {
+            bottom: 0;
+        }
+    }
     
     // footer //
 

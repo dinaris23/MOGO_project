@@ -2,6 +2,12 @@
     .items {
         &__item--blog {
             position: relative;
+
+            &:hover {
+                .items__date {
+                    transform: translate(-15%, 13%);
+                }
+            }
             
             &:nth-child(1) {
                 background: url(../img/raster/raster_images/blog_1.jpg);     
@@ -62,6 +68,26 @@
             border-bottom: $popup-border 1px solid;
         }
 
+        &__wrapper--inblock {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateY(120%);
+            width: 100%;
+            text-align: center;
+            color: black;
+            z-index: 1;
+
+            h4, h5, span {
+                color: inherit;
+            }
+
+            h4 {
+                text-align: center;
+            }
+        }
+
         &__wrapper--left {
             text-align: left;
         }
@@ -69,17 +95,6 @@
         &__number {
             font-style: italic;
             font-weight: 300;
-        }
-    }
-
-    .gradient--blue {
-        opacity: 1;
-        background: transparent;
-
-        &:hover {
-            .items__date {
-                transform: translate(-15%, 13%);
-            }
         }
     }
 

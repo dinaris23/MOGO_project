@@ -95,6 +95,6 @@ a {
 .italic {
     font-style: italic;
 }
-section:not(.feature) {
+section:not(.feature):not(.blog) {
     overflow: hidden;
 }
