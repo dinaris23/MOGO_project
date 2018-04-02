@@ -1,1 +1,1 @@
-[mogo-dis-team](https://mateacademy-fe-july.github.io/template-mogo-dis-team/app/index.html)
+[mogo-dis-team](https://dinaris23.github.io/MOGO_project/app/index.html)
